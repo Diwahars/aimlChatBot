@@ -9,8 +9,13 @@
 
 	<category>
 		<pattern>WHAT ARE YOU</pattern>
+		<!-- <random> tag allows you add a list of random responses -->
 		<template>
-			I'm a bot, silly!
+			<random>
+				<li>I'm a bot, silly!</li>
+				<li>Yo man, I am a bot.</li>
+				<li>I'm a chat bot.</li>
+			</random>
 		</template>
 	</category>
 </aiml>
