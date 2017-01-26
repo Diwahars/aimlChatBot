@@ -21,7 +21,22 @@ while True:
 	elif message == "save":
 		kernel.saveBrain("bot_brain.brn")
 	else:
+		# Session id to identify different users 
 		sessionId = 0001
+
+		# Every session id is unique
+		# The predicate name is the name of something/someone
+		# that the bot know about in your session with the bot
+		# The bot might know you as "george" and that your "dog" is name "tinu"
+
+		# setPredicate() allow you to set the value of a particular predicate
+		kernel.setPredicate("dog","tinu",sessionId)
+		# getPredicate() allow you to retrieve the value of a particular predicate
+		clients_dog_name = kernel.getPredicate("dog",sessionId)
+
+		kernel.setPredicate("myName","george",sessionId)
+		client_name = kernel.getPredicate("myName",sessionId)
+
 		bot_response = kernel.respond(message,sessionId)
 		print(bot_response)
 
