@@ -19,6 +19,12 @@
 		</template>
 	</category>
 	<category>
+		<pattern>DO YOU LIKE ME ?</pattern>
+		<template>
+			Yes, ofcourse
+		</template>
+	</category>
+	<category>
 		<pattern>MY DOGS NAME IS *</pattern>
 		<template>
 			That is interesting that you have a dog named <set name="dog"><star/></set>

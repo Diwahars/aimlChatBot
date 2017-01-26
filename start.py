@@ -22,7 +22,7 @@ while True:
 		kernel.saveBrain("bot_brain.brn")
 	else:
 		# Session id to identify different users 
-		sessionId = 0001
+		sessionId = 0002
 
 		# Every session id is unique
 		# The predicate name is the name of something/someone
@@ -37,6 +37,7 @@ while True:
 		kernel.setPredicate("myName","george",sessionId)
 		client_name = kernel.getPredicate("myName",sessionId)
 
+		# print(client_name)
 		bot_response = kernel.respond(message,sessionId)
 		print(bot_response)
 
